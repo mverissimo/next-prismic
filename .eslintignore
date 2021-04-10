@@ -1,0 +1,5 @@
+node_modules/
+public/
+.next/
+__coverage__/
+jest.*.js

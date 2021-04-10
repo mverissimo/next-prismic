@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@emotion",
+      {
+        "autoLabel": "dev-only",
+        "labelFormat": "[filename]--[local]",
+        "cssPropOptimization": true
+      }
+    ],
+    "lodash"
+  ]
+}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button styles should render with default style 1`] = `
+.next-0 {
+  color: #FFFFFF;
+  border: 0;
+  background: #000000;
+}
+
+.emotion-0 {
+  color: #FFFFFF;
+  border: 0;
+  background: #000000;
+}
+
+<button
+  class="emotion-0 emotion-1"
+>
+  Button
+</button>
+`;
