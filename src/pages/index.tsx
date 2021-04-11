@@ -1,17 +1,32 @@
 import React from 'react';
-import Head from 'next/head';
 
-import { Button } from '@components/Button';
+import { initializeApollo } from 'utils/apollo';
+import { QUERY_HOME } from 'graphql/queries/home';
 
-export default function Home() {
+function Home() {
   return (
     <React.Fragment>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Button>Button</Button>
+      <h1>Home</h1>
     </React.Fragment>
   );
 }
+
+export async function getStaticProps() {
+  const apolloClient = initializeApollo();
+
+  const {
+    data: { homepage },
+  } = await apolloClient.query({
+    query: QUERY_HOME,
+    variables: {
+      uid: 'home',
+      lang: 'en-us',
+    },
+  });
+
+  return {
+    props: homepage,
+  };
+}
+
+export default Home;
